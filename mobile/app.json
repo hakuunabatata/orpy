@@ -17,7 +17,8 @@
         "assetBundlePatterns": ["**/*"],
         "android": {
             "adaptiveIcon": {
-                "backgroundColor": "#222222"
+                "backgroundColor": "#3a920e",
+                "foregroundImage": "./assets/icon.png"
             }
         },
         "ios": {
