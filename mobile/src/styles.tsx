@@ -1,4 +1,3 @@
-import React from "react";
 import { StyleSheet } from "react-native";
 
 const orpyColor = "#3a920e";
@@ -38,7 +37,6 @@ const styles = StyleSheet.create({
         height: 60,
         width: 60,
         marginHorizontal: 5,
-        color: orpyColor,
     },
     user: {},
     text: { color: orpyColor },
@@ -47,7 +45,6 @@ const styles = StyleSheet.create({
         fontFamily: defaultFont,
     },
     tabLabel: {
-        color: secondColor,
         fontFamily: defaultFont,
         fontSize: 8,
         paddingBottom: 5,
@@ -252,6 +249,58 @@ const styles = StyleSheet.create({
         color: orpyColor,
     },
     smileText: { color: orpyColor, padding: 20 },
+    searchInput: {
+        backgroundColor: bkgColor,
+        height: 50,
+        width: "100%",
+        paddingHorizontal: 20,
+        fontFamily: boldFont,
+        textAlign: "center",
+        color: orpyColor,
+        fontSize: 20,
+        marginBottom: 5,
+    },
+    searchContainer: {
+        flex: 1,
+        backgroundColor: secondBkgColor,
+    },
+    resultContainer: {},
+    searchResult: {
+        flexDirection: "row",
+        padding: 10,
+    },
+    searchResultTextContainer: {
+        paddingHorizontal: 10,
+        justifyContent: "center",
+    },
+    searchResultInfos: {
+        fontFamily: defaultFont,
+        color: secondColor,
+    },
+    searchResultTitle: {
+        fontFamily: boldFont,
+        color: secondColor,
+    },
+    resultPeopleImage: {
+        height: 60,
+        width: 60,
+        borderRadius: 40,
+    },
+    resultEventImage: {
+        height: 60,
+        width: 60,
+        // borderRadius: 10,
+    },
+    resultEmptyContainer: {
+        justifyContent: "center",
+        height: "100%",
+    },
+    resultEmptyText: {
+        textAlign: "center",
+        fontFamily: boldFont,
+        color: secondColor,
+        fontSize: 20,
+    },
 });
 
 export default styles;

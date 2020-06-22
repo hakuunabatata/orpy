@@ -1,26 +1,22 @@
-import React from "react";
-import { Image, Text } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { createStackNavigator } from "@react-navigation/stack";
+import React from 'react'
+import { NavigationContainer } from '@react-navigation/native'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import {
     Foundation,
-    FontAwesome,
     AntDesign,
     MaterialIcons,
     Entypo,
-} from "@expo/vector-icons";
+    Feather
+} from '@expo/vector-icons'
 
-import Home from "./pages/Home";
-import Search from "./pages/Search";
-import Friends from "./pages/Friends";
-import New from "./pages/New";
-import Schedule from "./pages/Schedule";
+import Home from './pages/Home'
+import Search from './pages/Search'
+import Talks from './pages/Talks'
+import Schedule from './pages/Schedule'
 
-import styles from "./styles";
+import styles from './styles'
 
-const Tabs = createBottomTabNavigator();
-const Stack = createStackNavigator();
+const Tabs = createBottomTabNavigator()
 
 const Routes = () => (
     <>
@@ -33,9 +29,10 @@ const Routes = () => (
                     style: styles.tabBar,
                     tabStyle: styles.tab,
                     labelStyle: styles.tabLabel,
+
                     activeTintColor: styles.default.color,
                     inactiveTintColor: styles.default.borderColor,
-                    safeAreaInsets: { bottom: 0, top: 0 },
+                    safeAreaInsets: { bottom: 0, top: 0 }
                 }}
             >
                 <Tabs.Screen
@@ -44,7 +41,7 @@ const Routes = () => (
                     options={{
                         tabBarIcon: ({ color, size }) => (
                             <Foundation name="home" size={20} color={color} />
-                        ),
+                        )
                     }}
                 ></Tabs.Screen>
                 <Tabs.Screen
@@ -53,20 +50,20 @@ const Routes = () => (
                     options={{
                         tabBarIcon: ({ color, size }) => (
                             <AntDesign name="search1" size={20} color={color} />
-                        ),
+                        )
                     }}
                 ></Tabs.Screen>
                 <Tabs.Screen
-                    name="Friends"
-                    component={Friends}
+                    name="Talks"
+                    component={Talks}
                     options={{
                         tabBarIcon: ({ color, size }) => (
-                            <MaterialIcons
-                                name="people"
+                            <Feather
+                                name="message-circle"
                                 size={20}
                                 color={color}
                             />
-                        ),
+                        )
                     }}
                 ></Tabs.Screen>
                 <Tabs.Screen
@@ -79,25 +76,13 @@ const Routes = () => (
                                 size={20}
                                 color={color}
                             />
-                        ),
+                        )
                     }}
                 ></Tabs.Screen>
-                <Tabs.Screen
-                    name="New"
-                    component={New}
-                    options={{
-                        tabBarIcon: ({ color, size }) => (
-                            <Entypo
-                                name="circle-with-plus"
-                                size={20}
-                                color={color}
-                            />
-                        ),
-                    }}
-                ></Tabs.Screen>
+                
             </Tabs.Navigator>
         </NavigationContainer>
     </>
-);
+)
 
-export default Routes;
+export default Routes
