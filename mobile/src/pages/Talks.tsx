@@ -1,13 +1,16 @@
-import React from 'react'
-import { View, Text } from 'react-native'
-import styles from '../styles'
+import React from "react";
+import { View, Text } from "react-native";
+import styles from "../styles";
 
 const Talks = () => (
-  <>
-    <View style={styles.empty}>
-      <Text style={styles.text}>Your Talks will appear here</Text>
-    </View>
-  </>
-)
+    <>
+        <View style={styles.header}>
+            <Text style={styles.headerTitle}>Talks</Text>
+        </View>
+        <View style={styles.empty}>
+            <Text style={styles.text}>Your Talks will appear here</Text>
+        </View>
+    </>
+);
 
-export default Talks
+export default Talks;

@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: bkgColor,
+        backgroundColor: secondBkgColor,
     },
     default: {
         color: orpyColor,
@@ -52,7 +52,11 @@ const styles = StyleSheet.create({
     tabBar: {
         backgroundColor: bkgColor,
         padding: 0,
-        height: 60,
+        height: 50,
+    },
+    tabIcon: {},
+    tabIconFocused: {
+        color: orpyColor,
     },
     userName: {
         color: secondColor,
@@ -62,14 +66,28 @@ const styles = StyleSheet.create({
         width: 70,
         height: 15,
     },
-    logoContainer: {
+    header: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
         backgroundColor: bkgColor,
         color: orpyColor,
         padding: 10,
     },
+    headerTitle: {
+        color: secondColor,
+        fontFamily: boldFont,
+        fontSize: 23,
+        paddingLeft: 20,
+    },
+    headerIcon: {
+        color: secondColor,
+        marginHorizontal: 20,
+    },
     logo: {
+        marginHorizontal: 10,
         resizeMode: "contain",
-        height: 40,
+        height: 30,
         width: 100,
     },
     category: {
@@ -131,24 +149,34 @@ const styles = StyleSheet.create({
         height: 40,
         textAlign: "center",
     },
-    people: {
+    peopleContainer: {
         backgroundColor: bkgColor,
+        paddingVertical: 10,
+    },
+    people: {
+        backgroundColor: secondBkgColor,
         alignItems: "center",
         width: 150,
-        borderRadius: 10,
-        marginHorizontal: 5,
+        marginHorizontal: 2.5,
         paddingTop: 10,
+        borderColor: orpyColor,
+        borderRadius: 5,
+        borderWidth: 0.3,
+    },
+    peopleInfoContainer: {
+        alignItems: "center",
     },
     peopleImage: {
-        height: 120,
-        width: 120,
-        borderRadius: 60,
+        margin: 5,
+        height: 90,
+        width: 90,
+        borderRadius: 45,
     },
     peopleName: {
-        marginTop: 20,
+        marginTop: 5,
         color: secondColor,
         fontFamily: boldFont,
-        width: 140,
+        width: 130,
         height: 40,
         textAlign: "center",
     },
@@ -157,7 +185,7 @@ const styles = StyleSheet.create({
         width: 130,
         height: 30,
         justifyContent: "center",
-        borderRadius: 10,
+        borderRadius: 5,
         backgroundColor: orpyColor,
     },
     addButtonText: {
@@ -166,18 +194,13 @@ const styles = StyleSheet.create({
         fontFamily: boldFont,
     },
     singleEvent: {
-        padding: 0,
         flex: 1,
-        backgroundColor: bkgColor,
-        paddingTop: 20,
-        borderRadius: 10,
     },
     singleEventImageContainer: {
         alignItems: "center",
     },
     singleEventImage: {
-        borderRadius: 10,
-        width: 300,
+        width: "100%",
         height: 250,
     },
     singleEventTitle: {
@@ -250,15 +273,15 @@ const styles = StyleSheet.create({
     },
     smileText: { color: orpyColor, padding: 20 },
     searchInput: {
-        backgroundColor: bkgColor,
-        height: 50,
-        width: "100%",
-        paddingHorizontal: 20,
+        color: secondColor,
         fontFamily: boldFont,
-        textAlign: "center",
-        color: orpyColor,
+        // height: 50,
+        flex: 1,
+        paddingHorizontal: 20,
+
+        textAlign: "left",
+
         fontSize: 20,
-        marginBottom: 5,
     },
     searchContainer: {
         flex: 1,

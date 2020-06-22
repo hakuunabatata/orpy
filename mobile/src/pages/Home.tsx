@@ -10,11 +10,18 @@ const { friends, events, categories } = examples;
 
 const Home = () => (
     <>
-        <View style={styles.logoContainer}>
+        <View style={styles.header}>
             <Image
                 style={styles.logo}
                 source={require("../../assets/logo.png")}
             />
+            <TouchableOpacity>
+                <AntDesign
+                    name="pluscircleo"
+                    size={25}
+                    style={styles.headerIcon}
+                />
+            </TouchableOpacity>
         </View>
         <ScrollView style={styles.container}>
             <ScrollView
@@ -86,13 +93,18 @@ const Home = () => (
                                 </TouchableOpacity>
                             </ScrollView>
                         ) : category.type === "people" ? (
-                            <ScrollView horizontal>
+                            <ScrollView
+                                horizontal
+                                style={styles.peopleContainer}
+                            >
                                 {friends.map((friend) => (
                                     <View
                                         style={styles.people}
                                         key={friend.idUser}
                                     >
-                                        <TouchableOpacity>
+                                        <TouchableOpacity
+                                            style={styles.peopleInfoContainer}
+                                        >
                                             <Image
                                                 source={require("../../assets/users/3.png")}
                                                 style={styles.peopleImage}

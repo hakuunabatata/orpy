@@ -45,11 +45,13 @@ const Search = () => {
         <>
             <View style={styles.searchContainer}>
                 {/* <Text style={styles.searchTitle}>Search</Text> */}
-                <TextInput
-                    style={styles.searchInput}
-                    placeholder="Search"
-                    onChange={(text) => getSearchResults(String(text))}
-                />
+                <View style={styles.header}>
+                    <TextInput
+                        style={styles.searchInput}
+                        placeholder="Search"
+                        onChange={(text) => getSearchResults(String(text))}
+                    />
+                </View>
 
                 {searchRes.length > 0 ? (
                     <ScrollView style={styles.resultContainer}>
