@@ -8,12 +8,12 @@ import {
     FontAwesome,
 } from "@expo/vector-icons";
 
-import Home from "./pages/Home";
-import Search from "./pages/Search";
-import Talks from "./pages/Talks";
-import Schedule from "./pages/Schedule";
+import Home from "../pages/Home";
+import Search from "../pages/Search";
+import Talks from "../pages/Talks";
+import Schedule from "../pages/Schedule";
 
-import styles from "./styles";
+import styles from "../styles";
 
 const Tabs = createBottomTabNavigator();
 

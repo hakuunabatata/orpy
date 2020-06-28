@@ -208,7 +208,7 @@ const styles = StyleSheet.create({
         color: secondColor,
         fontFamily: boldFont,
         fontSize: 20,
-        height: 60,
+        height: 50,
         padding: 10,
     },
     singleEventDescription: {
@@ -289,30 +289,37 @@ const styles = StyleSheet.create({
     },
     resultContainer: {},
     searchResult: {
+        paddingVertical: 10,
+        paddingHorizontal: 20,
         flexDirection: "row",
-        padding: 10,
     },
     searchResultTextContainer: {
-        paddingHorizontal: 10,
         justifyContent: "center",
+        borderColor: bkgColor,
+        width: 250,
     },
     searchResultInfos: {
-        fontFamily: defaultFont,
         color: secondColor,
+        fontFamily: defaultFont,
+        fontSize: 15,
+        height: 20,
     },
     searchResultTitle: {
-        fontFamily: boldFont,
         color: secondColor,
+        fontFamily: boldFont,
+        fontSize: 15,
+        height: 20,
     },
     resultPeopleImage: {
+        marginRight: 20,
         height: 60,
         width: 60,
-        borderRadius: 40,
+        borderRadius: 30,
     },
     resultEventImage: {
+        marginRight: 20,
         height: 60,
         width: 60,
-        // borderRadius: 10,
     },
     resultEmptyContainer: {
         justifyContent: "center",
@@ -346,7 +353,7 @@ const styles = StyleSheet.create({
         height: 20,
     },
     talkPreview: {
-        color: orpyColor,
+        color: secondColor,
         fontFamily: defaultFont,
         fontSize: 15,
         height: 20,
@@ -356,6 +363,51 @@ const styles = StyleSheet.create({
         height: 60,
         width: 60,
         borderRadius: 30,
+    },
+    scheduleContainer: {
+        backgroundColor: secondBkgColor,
+    },
+    scheduleEvent: {
+        flex: 1,
+        margin: 20,
+        borderBottomColor: orpyColor,
+        borderBottomWidth: 1,
+    },
+    scheduleEventImageContainer: {
+        alignItems: "center",
+    },
+    scheduleEventImage: {
+        width: "100%",
+        height: 250,
+    },
+    scheduleEventTitle: {
+        textAlign: "center",
+        color: secondColor,
+        fontFamily: boldFont,
+        fontSize: 20,
+        height: 50,
+        padding: 10,
+    },
+    scheduleEventDescription: {
+        color: secondColor,
+        fontFamily: defaultFont,
+        padding: 10,
+        fontSize: 10,
+    },
+    scheduleEventInfo: {
+        flexDirection: "row",
+        padding: 20,
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    scheduleEventInfoText: {
+        color: orpyColor,
+        width: 100,
+        fontFamily: defaultFont,
+    },
+    scheduleEventInfoIcon: {
+        color: orpyColor,
+        padding: 20,
     },
 });
 
