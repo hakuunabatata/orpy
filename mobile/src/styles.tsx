@@ -324,6 +324,39 @@ const styles = StyleSheet.create({
         color: secondColor,
         fontSize: 20,
     },
+    talkContainer: {
+        flex: 1,
+        backgroundColor: secondBkgColor,
+    },
+    talk: {
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        flexDirection: "row",
+    },
+    talkText: {
+        justifyContent: "center",
+        borderColor: bkgColor,
+        width: 250,
+        borderBottomWidth: 1,
+    },
+    talkTitle: {
+        color: secondColor,
+        fontFamily: boldFont,
+        fontSize: 15,
+        height: 20,
+    },
+    talkPreview: {
+        color: orpyColor,
+        fontFamily: defaultFont,
+        fontSize: 15,
+        height: 20,
+    },
+    talkImage: {
+        marginRight: 20,
+        height: 60,
+        width: 60,
+        borderRadius: 30,
+    },
 });
 
 export default styles;

@@ -20,24 +20,20 @@ const Search = () => {
     const [searchRes, setSearchRes] = useState<Result[]>([]);
 
     function getSearchResults(searchText: string) {
-        const eventsRes = events
-            // .filter((item) => item.name.includes(searchText))
-            .map((item) => ({
-                id: item.idEvent,
-                name: item.name,
-                infos: {
-                    date: item.date,
-                    location: item.location,
-                },
-                type: "Event",
-            }));
-        const friendsRes = friends
-            // .filter((item) => item.name.includes(searchText))
-            .map((item) => ({
-                id: item.idUser,
-                name: item.name,
-                type: "People",
-            }));
+        const eventsRes = events.map((item) => ({
+            id: item.idEvent,
+            name: item.name,
+            infos: {
+                date: item.date,
+                location: item.location,
+            },
+            type: "Event",
+        }));
+        const friendsRes = friends.map((item) => ({
+            id: item.idUser,
+            name: item.name,
+            type: "People",
+        }));
         setSearchRes([...eventsRes, ...friendsRes]);
     }
 
