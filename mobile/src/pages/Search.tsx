@@ -15,7 +15,7 @@ interface ResultInfo {
     location: String;
 }
 
-const Search = () => {
+const Search: React.FC = () => {
     const { friends, events, categories } = examples;
     const [searchRes, setSearchRes] = useState<Result[]>([]);
 

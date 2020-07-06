@@ -1,24 +1,26 @@
-import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import React from "react";
+import { View, Text, TextInput, Image } from "react-native";
+import styles from "../styles";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
-const Login = () => (
-  <>
-    <View style={styles.container}>
-      <Text style={styles.text}>Your Login will appear here</Text>
-    </View>
-  </>
-)
+const Login: React.FC = () => (
+    <>
+        <View style={styles.loginContainer}>
+            <Image
+                source={require("../../assets/icon.png")}
+                style={styles.loginLogo}
+            />
+            <TextInput style={styles.loginInput} placeholder="Login" />
+            <TextInput
+                style={styles.loginInput}
+                placeholder="Password"
+                secureTextEntry={true}
+            />
+            <TouchableOpacity style={styles.loginButton} onPress={() => {}}>
+                <Text style={styles.loginButtonText}> Submit </Text>
+            </TouchableOpacity>
+        </View>
+    </>
+);
 
-export default Login
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#1a1a1a',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  text: {
-    color: '#0a0'
-  }
-})
+export default Login;

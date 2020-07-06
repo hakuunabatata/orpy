@@ -8,7 +8,7 @@ import examples from "../examples";
 
 const { friends, events, categories } = examples;
 
-const Home = () => (
+const Home: React.FC = () => (
     <>
         <View style={styles.header}>
             <Image

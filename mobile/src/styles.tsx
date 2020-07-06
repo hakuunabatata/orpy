@@ -409,6 +409,43 @@ const styles = StyleSheet.create({
         color: orpyColor,
         padding: 20,
     },
+    loginContainer: {
+        flex: 1,
+        backgroundColor: secondBkgColor,
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    loginContainerText: {
+        color: orpyColor,
+    },
+    loginLogo: {
+        height: 60,
+        width: 60,
+        margin: 30,
+    },
+    loginInput: {
+        margin: 10,
+        color: secondColor,
+        fontFamily: defaultFont,
+        backgroundColor: bkgColor,
+        height: 35,
+        width: 300,
+        padding: 10,
+        justifyContent: "center",
+        opacity: 0.5,
+    },
+    loginButton: {
+        width: 315,
+    },
+    loginButtonText: {
+        textAlign: "center",
+        margin: 10,
+        borderWidth: 1,
+        borderColor: orpyColor,
+        padding: 10,
+        color: secondColor,
+        fontFamily: boldFont,
+    },
 });
 
 export default styles;

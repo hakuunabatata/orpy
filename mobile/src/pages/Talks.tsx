@@ -10,7 +10,7 @@ interface Talk {
     type: String;
 }
 
-const Talks = () => {
+const Talks: React.FC = () => {
     const { friends, events } = examples;
     const eventsRes = events.map((item) => ({
         id: item.idEvent,

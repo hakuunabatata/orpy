@@ -1,6 +1,6 @@
 import React from "react";
 import { StatusBar } from "react-native";
-import Routes from "./src/routes/Tab";
+import Routes from "./src/routes/routes";
 import { AppLoading } from "expo";
 import {
     OpenSans_300Light,

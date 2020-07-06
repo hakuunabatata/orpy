@@ -4,7 +4,7 @@ import { AntDesign, FontAwesome } from "@expo/vector-icons";
 import styles from "../styles";
 import examples from "../examples";
 
-const Schedule = () => {
+const Schedule: React.FC = () => {
     const { events } = examples;
 
     return (
