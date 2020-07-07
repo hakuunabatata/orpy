@@ -3,8 +3,10 @@ import { View, Text, TouchableOpacity, Image, ScrollView } from "react-native";
 import { AntDesign, FontAwesome } from "@expo/vector-icons";
 import styles from "../styles";
 import examples from "../examples";
+import { useNavigation } from "@react-navigation/native";
 
 const Schedule: React.FC = () => {
+    const navigation = useNavigation();
     const { events } = examples;
 
     return (
@@ -17,6 +19,7 @@ const Schedule: React.FC = () => {
                     <TouchableOpacity
                         key={event.idEvent}
                         style={styles.scheduleEvent}
+                        onPress={() => navigation.navigate("Event")}
                     >
                         <View style={styles.scheduleEventImageContainer}>
                             <Image

@@ -2,6 +2,8 @@ import React from "react";
 import { View, Text, Image, ScrollView } from "react-native";
 import styles from "../styles";
 import examples from "../examples";
+import { useNavigation } from "@react-navigation/native";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 interface Talk {
     id: Number;
@@ -11,6 +13,7 @@ interface Talk {
 }
 
 const Talks: React.FC = () => {
+    const navigation = useNavigation();
     const { friends, events } = examples;
     const eventsRes = events.map((item) => ({
         id: item.idEvent,
@@ -34,9 +37,10 @@ const Talks: React.FC = () => {
                 </View>
                 <ScrollView>
                     {talks.map((talk) => (
-                        <View
+                        <TouchableOpacity
                             key={`${talk.type}-${talk.id}`}
                             style={styles.talk}
+                            onPress={() => navigation.navigate("Talk")}
                         >
                             <Image
                                 style={styles.talkImage}
@@ -50,7 +54,7 @@ const Talks: React.FC = () => {
                                     {talk.preview}
                                 </Text>
                             </View>
-                        </View>
+                        </TouchableOpacity>
                     ))}
                 </ScrollView>
             </View>

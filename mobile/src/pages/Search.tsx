@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { View, Text, Image, TextInput, ScrollView } from "react-native";
 import styles from "../styles";
 import examples from "../examples";
+import { useNavigation } from "@react-navigation/native";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 interface Result {
     id: Number;
@@ -16,6 +18,7 @@ interface ResultInfo {
 }
 
 const Search: React.FC = () => {
+    const navigation = useNavigation();
     const { friends, events, categories } = examples;
     const [searchRes, setSearchRes] = useState<Result[]>([]);
 
@@ -32,7 +35,7 @@ const Search: React.FC = () => {
         const friendsRes = friends.map((item) => ({
             id: item.idUser,
             name: item.name,
-            type: "People",
+            type: "User",
         }));
         setSearchRes([...eventsRes, ...friendsRes]);
     }
@@ -52,7 +55,12 @@ const Search: React.FC = () => {
                 {searchRes.length > 0 ? (
                     <ScrollView style={styles.resultContainer}>
                         {searchRes.map((item) => (
-                            <View key={`${item.type}-${item.id}`}>
+                            <TouchableOpacity
+                                key={`${item.type}-${item.id}`}
+                                onPress={() =>
+                                    navigation.navigate(String(item.type))
+                                }
+                            >
                                 <View style={styles.searchResult}>
                                     <Image
                                         style={
@@ -83,7 +91,7 @@ const Search: React.FC = () => {
                                         </Text>
                                     </View>
                                 </View>
-                            </View>
+                            </TouchableOpacity>
                         ))}
                     </ScrollView>
                 ) : (

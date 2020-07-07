@@ -446,6 +446,17 @@ const styles = StyleSheet.create({
         color: secondColor,
         fontFamily: boldFont,
     },
+    signUpContainer: {
+        flexDirection: "row",
+    },
+    signUpClick: {
+        color: orpyColor,
+        fontFamily: boldFont,
+    },
+    signUpText: {
+        color: secondColor,
+        fontFamily: defaultFont,
+    },
 });
 
 export default styles;
